@@ -19,5 +19,10 @@ class UserValidation {
         let phoneNo = /^[0|+91]{1,}[-][6-9]{1,}?[0-9]{9}$/.test(input)
         console.log(phoneNo);
     }
+
+    validatePasswordRule1 = (input) => {
+        let password = /[A-Za-z]{8,25}/.test(input)
+        console.log(password);
+    }
 }
 module.exports = new UserValidation();
