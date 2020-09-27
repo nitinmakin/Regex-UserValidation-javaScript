@@ -1,18 +1,23 @@
 class UserValidation {
 
-    validateFirstName = (Name) => {
-        let firstName = /^[A-Z]{1}([a-z]{2,15})$/.test(Name)
+    validateFirstName = (input) => {
+        let firstName = /^[A-Z]{1}([a-z]{2,15})$/.test(input)
         console.log(firstName);
     }
 
-    validateLastName = (Name) => {
-        let firstName = /^[A-Z]{1}([a-z]{2,15})$/.test(Name)
+    validateLastName = (input) => {
+        let firstName = /^[A-Z]{1}([a-z]{2,15})$/.test(input)
         console.log(firstName);
     }
 
-    validateEmail = (Email) => {
-        let eMail = /^[a-zA-Z]+[a-zA-Z0-9]*[._+-]?[a-zA-Z0-9]*@[A-Za-z0-9]+([.][a-zA-Z]{2,})$/.test(Email)
+    validateEmail = (input) => {
+        let eMail = /^[a-zA-Z]+[a-zA-Z0-9]*[._+-]?[a-zA-Z0-9]*@[A-Za-z0-9]+([.][a-zA-Z]{2,})$/.test(input)
         console.log(eMail);
+    }
+
+    validatePhoneNo = (input) => {
+        let phoneNo = /^[0|+91]{1,}[-][6-9]{1,}?[0-9]{9}$/.test(input)
+        console.log(phoneNo);
     }
 }
 module.exports = new UserValidation();

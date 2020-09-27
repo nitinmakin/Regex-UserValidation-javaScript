@@ -4,7 +4,7 @@ console.log("Welcome to user validation Program")
 var input = readline.createInterface(process.stdin, process.stdout);
 var i = 0;
 
-input.question("1.First_Name   2.Last_Name  3.Email : ", function (option) {
+input.question("1.First_Name   2.Last_Name  3.Email  4.PhoneNo : ", function (option) {
 
     switch (option) {
         case "1":
@@ -24,6 +24,13 @@ input.question("1.First_Name   2.Last_Name  3.Email : ", function (option) {
         case "3":
             input.question("Enter Your Email: ", function (Email) {
                 result.validateEmail(Email);
+                process.exit();
+            })
+            break;
+
+        case "4":
+            input.question("Enter Your Phone Number: ", function (phoneNo) {
+                result.validatePhoneNo(phoneNo);
                 process.exit();
             })
             break;
