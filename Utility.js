@@ -40,4 +40,5 @@ class UserValidation {
         console.log(password);
     }
 }
+
 module.exports = new UserValidation();
