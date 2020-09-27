@@ -4,7 +4,7 @@ console.log("Welcome to user validation Program")
 var input = readline.createInterface(process.stdin, process.stdout);
 var i = 0;
 
-input.question("1.First_Name   2.Last_Name  3.Email  4.PhoneNo : \n", function (option) {
+input.question("1.First_Name   2.Last_Name  3.Email  4.PhoneNo  5.Password_Rule1   6.Password_Rule2 \n", function (option) {
 
     switch (option) {
         case "1":
@@ -35,12 +35,19 @@ input.question("1.First_Name   2.Last_Name  3.Email  4.PhoneNo : \n", function (
                 })
                 break;
 
-            case "5":
-            input.question("Enter password with min 8 char : \n", function (password) {
-                result.validatePasswordRule1(password);
-                process.exit();
-            })
-            break;
+                case "5":
+                    input.question("Enter password with min 8 char : \n", function (password) {
+                        result.validatePasswordRule1(password);
+                        process.exit();
+                    })
+                    break;
+
+                    case "6":
+                        input.question("Enter password with atleast 1 upper case char : \n", function (password) {
+                            result.validatePasswordRule2(password);
+                            process.exit();
+                        })
+                        break;
     }
 })
 
