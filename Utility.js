@@ -20,25 +20,9 @@ class UserValidation {
         console.log(phoneNo);
     }
 
-    validatePasswordRule1 = (input) => {
-        let password = /[A-Za-z]{8,25}/.test(input)
-        console.log(password);
-    }
-
-    validatePasswordRule2 = (input) => {
-        let password = /[A-Z]{1,}[a-z]{8,}/.test(input)
-        console.log(password);
-    }
-
-    validatePasswordRule3 = (input) => {
-        let password = /^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(.{8,25})$/.test(input)
-        console.log(password);
-    }
-
-    validatePasswordRule4 = (input) => {
+    validatePassword = (input) => {
         let password = /^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[@|!]{1})(.{8,25})$/.test(input)
         console.log(password);
     }
 }
-
 module.exports = new UserValidation();
