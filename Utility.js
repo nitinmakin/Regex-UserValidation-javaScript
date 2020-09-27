@@ -29,5 +29,9 @@ class UserValidation {
         let password = /[A-Z]{1,}[a-z]{8,}/.test(input)
         console.log(password);
     }
+    validatePasswordRule3 = (input) => {
+        let password = /^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(.{8,25})$/.test(input)
+        console.log(password);
+    }
 }
 module.exports = new UserValidation();
